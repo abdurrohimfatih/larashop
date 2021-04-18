@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 09, 2021 at 01:15 PM
+-- Generation Time: Apr 18, 2021 at 09:43 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -53,8 +53,9 @@ CREATE TABLE `books` (
 
 INSERT INTO `books` (`id`, `title`, `slug`, `description`, `author`, `publisher`, `cover`, `price`, `views`, `stock`, `status`, `created_by`, `updated_by`, `deleted_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (1, 'Pemrograman Web', 'pemrograman-web', 'Buku Pemrograman Web dengan HTML, CSS, JS, PHP, mySQL', 'Ohim', 'Ohim, Inc.', 'book-covers/Sg7gqIK8p5Wvnw3WQE9gsyxchxbqdTuMFQVy9XUp.jpg', 50000.00, 0, 50, 'PUBLISH', 2, 2, NULL, '2021-02-24 01:05:30', '2021-04-04 22:10:02', NULL),
-(3, 'Matematika Teknik', 'matematika-teknik', 'Buku Matematika untuk jurusan perteknikan', 'Ratnadewi', 'Rekayasa Sains', 'book-covers/RW2fA6mH5yxQZ98CoyjObJCaG7vbQNAwPD6s9PxH.jpg', 120000.00, 0, 100, 'PUBLISH', 2, NULL, NULL, '2021-03-31 22:08:25', '2021-04-07 08:05:05', '2021-04-07 08:05:05'),
-(4, 'TOEFL', 'toefl', 'Buku pembelajaran Bahasa Inggris dengan TOEFL', 'Tim Presiden Eduka', 'Almanda Media', 'book-covers/RfZyK1CmX5K2wCs7jvpsF9LiAjjT6GE2GMRE1G9M.jpg', 153000.00, 0, 80, 'DRAFT', 2, NULL, NULL, '2021-03-31 22:12:08', '2021-03-31 22:12:08', NULL);
+(3, 'Matematika Teknik', 'matematika-teknik', 'Buku Matematika untuk jurusan perteknikan', 'Ratnadewi', 'Rekayasa Sains', 'book-covers/RW2fA6mH5yxQZ98CoyjObJCaG7vbQNAwPD6s9PxH.jpg', 120000.00, 0, 100, 'PUBLISH', 2, NULL, NULL, '2021-03-31 22:08:25', '2021-04-16 02:21:20', NULL),
+(4, 'TOEFL', 'toefl', 'Buku pembelajaran Bahasa Inggris dengan TOEFL', 'Tim Presiden Eduka', 'Almanda Media', 'book-covers/RfZyK1CmX5K2wCs7jvpsF9LiAjjT6GE2GMRE1G9M.jpg', 153000.00, 0, 80, 'DRAFT', 2, NULL, NULL, '2021-03-31 22:12:08', '2021-04-15 07:41:25', '2021-04-15 07:41:25'),
+(13, 'alsdasldal', 'alsdasldal', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'hasldas', 'akjdasdas', 'book-covers/HVLrm2S0k8HzkTJ1LZxIYRIJxWdh0mNKWB5Z6ugD.png', 111111.00, 0, 10, 'PUBLISH', 2, NULL, NULL, '2021-04-15 08:30:44', '2021-04-15 08:30:53', '2021-04-15 08:30:53');
 
 -- --------------------------------------------------------
 
@@ -77,7 +78,8 @@ CREATE TABLE `book_category` (
 INSERT INTO `book_category` (`id`, `book_id`, `category_id`, `created_at`, `updated_at`) VALUES
 (1, 3, 4, NULL, NULL),
 (2, 4, 4, NULL, NULL),
-(3, 1, 4, NULL, NULL);
+(3, 1, 4, NULL, NULL),
+(13, 13, 4, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -126,9 +128,10 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `name`, `slug`, `image`, `created_by`, `updated_by`, `deleted_by`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, 'Elektronik', 'elektronik', 'category_images/9PTQqsFqfNQTEjiu3AwsfyhxdhnruXogk59gbiev.jpg', 2, 2, NULL, '2021-04-04 23:39:36', '2021-02-22 02:39:54', '2021-04-04 23:39:36'),
+(1, 'Elektronik', 'elektronik', 'category_images/9PTQqsFqfNQTEjiu3AwsfyhxdhnruXogk59gbiev.jpg', 2, 2, NULL, NULL, '2021-02-22 02:39:54', '2021-04-17 07:49:53'),
 (2, 'Pakaian', 'pakaian', 'category_images/WR53L0n3AKdc4nWIust6ydbxkWgWHnkNtF2ArFkG.png', 2, NULL, NULL, NULL, '2021-02-23 04:39:01', '2021-02-23 05:13:50'),
-(4, 'Buku', 'buku', 'category_images/2ySE01xy4JifVftAbqqaAirvRB0NP3MBHQ96llR1.jpg', 2, NULL, NULL, NULL, '2021-02-25 17:45:32', '2021-02-25 17:45:32');
+(4, 'Buku', 'buku', 'category_images/2ySE01xy4JifVftAbqqaAirvRB0NP3MBHQ96llR1.jpg', 2, NULL, NULL, '2021-04-17 10:30:06', '2021-02-25 17:45:32', '2021-04-17 10:30:06'),
+(5, 'Teknologi', 'teknologi', 'category_images/ZfPmzLiOfHB95Pfh8UDFnMrCx5sypaGyQWELlXk5.png', 2, NULL, NULL, NULL, '2021-04-17 10:29:28', '2021-04-17 10:29:28');
 
 -- --------------------------------------------------------
 
@@ -237,10 +240,14 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`, `username`, `roles`, `address`, `phone`, `avatar`, `status`) VALUES
-(2, 'Site Administrator', 'admin@larashop.com', NULL, '$2y$10$UGlzPGBqekgDOlNWhQVOeO/zxeTOnlrHXY7mB7g6w1Vqk.vkRlluC', 'Nvf0dTnevipXJ6kCuVa3v7AD9F730JW3L9FQrvZfD2S61RpzSkpr6KTjWV6I', '2021-02-14 05:03:38', '2021-02-16 00:29:11', 'admin', '[\"ADMIN\"]', 'Karangmekar, Karangsembung, Cirebon', '083195522115', 'avatars/fGD5TXJOMyTWy1fQpdvfpJS3VYTY3hRH3EVO0T44.jpg', 'ACTIVE'),
+(2, 'Site Administrator', 'admin@larashop.com', NULL, '$2y$10$UGlzPGBqekgDOlNWhQVOeO/zxeTOnlrHXY7mB7g6w1Vqk.vkRlluC', 'qdpkHZhlRwsi6hQwHFKdQ8Z88ukoBtChlkjWVG5N3SxxNS8pabmoiOIC8p8z', '2021-02-14 05:03:38', '2021-02-16 00:29:11', 'admin', '[\"ADMIN\"]', 'Karangmekar, Karangsembung, Cirebon', '083195522115', 'avatars/fGD5TXJOMyTWy1fQpdvfpJS3VYTY3hRH3EVO0T44.jpg', 'ACTIVE'),
 (3, 'Ohim', 'user@mail.com', NULL, '$2y$10$zVpZK7LwT82nRfqk369ZceZXC7yZpB9wazSBDn2z3mbj5yeHrDwpG', NULL, '2021-02-15 00:07:41', '2021-02-15 00:07:41', 'ohim', '[\"STAFF\",\"CUSTOMER\"]', 'Blablabla', '6281234567890', 'avatars/Ygu8B4I7lkpXQmhVgpJwFThMXzMlwfRhAswo6gq3.png', 'ACTIVE'),
 (5, 'Saya', 'abc@mail.com', NULL, '$2y$10$HuWC.nbdGZ4VjhnAspTBD.pfgx0A9S5/i0ptBPdF0nXmzncH7VQ2.', NULL, '2021-02-16 21:13:53', '2021-02-16 21:13:53', 'saya', '[\"STAFF\"]', 'asldsak;j', '08123', 'avatars/YeVUyyOHOIDmjzW5Fei4LWmReB2HJqqVXqNrozVa.jpg', 'ACTIVE'),
-(6, 'Andi', 'andi@mail.com', NULL, '$2y$10$o3ROo5Jpu.slDdjvEf/kiecWXlFtZ/nWfDEW.sPYzc4GF17qISQka', NULL, '2021-02-21 22:49:52', '2021-02-21 22:49:52', 'andi', '[\"CUSTOMER\"]', 'xxx', 'xxx', 'avatars/UAV74a2com7YRuIT8011BvkatsajgVy4mTP76JjA.png', 'INACTIVE');
+(6, 'Andi', 'andi@mail.com', NULL, '$2y$10$o3ROo5Jpu.slDdjvEf/kiecWXlFtZ/nWfDEW.sPYzc4GF17qISQka', NULL, '2021-02-21 22:49:52', '2021-02-21 22:49:52', 'andi', '[\"CUSTOMER\"]', 'xxx', 'xxx', 'avatars/UAV74a2com7YRuIT8011BvkatsajgVy4mTP76JjA.png', 'INACTIVE'),
+(7, 'Anuuu', 'anu@yahoo.com', NULL, '$2y$10$IjEDYFHNnr4QlV2nIuKvZOvT7.m1TjiI5sg358ahfHQhtA2SEF7my', NULL, '2021-04-10 02:34:17', '2021-04-10 02:34:17', 'anuuu', '[\"CUSTOMER\"]', 'Jakarta, Indonesia, Asia', '080382183219', 'avatars/d6gY6lkMGO8bDfd3PlCmOdR4JhK0ALiPoiy8TfXo.png', 'ACTIVE'),
+(8, 'Abcdef', 'abcdef@gmail.com', NULL, '$2y$10$uRI2gqeYXjpO/kR8PIuHkeEfc77cQ2ylK856GgzvZ8akdcyor39tG', NULL, '2021-04-12 01:18:49', '2021-04-12 01:18:49', 'abcdef', '[\"CUSTOMER\"]', 'Indonesia, Inggris, Jerman, Arab, Amerika Serikat', '088127639213', 'avatars/p4rNvtdcMOj6AVzBOwakvGZTEc7O3kj2DCc46PZL.png', 'ACTIVE'),
+(9, 'asdpashda', 'asjdsa@ajsad.asd', NULL, '$2y$10$NzMMidwgvI8A7qKFVT1wm.y11QAQnhlwNiJtyAG5yUTx4Nn9LpHiq', NULL, '2021-04-12 17:34:51', '2021-04-12 17:34:51', 'asadpashi', '[\"CUSTOMER\"]', 'adsalsjdkasjdasalsndlasdlkasksajdkaskdaskld', '081223781212', 'avatars/ntESb51X3WXRZJeWVeqqhgClNvJkRR97uRnX5O6d.png', 'ACTIVE'),
+(12, 'aldasldasdkj', 'asldja@asdlas.sajdlas', NULL, '$2y$10$wapJ45J4EboYIDB5Vl.taeo95YacEmM3Pt09fYGe5zjC/hYMZ8PnG', NULL, '2021-04-14 17:47:20', '2021-04-14 17:47:20', 'aldjaskdasdla', '[\"CUSTOMER\"]', 'lasdkjaldjaskdajsdasda sadjasdassa', '29387423893', 'avatars/5XyCbT3QcLRnIQ795LYvpLbGXaZ6pwKlTkCxGdQL.png', 'ACTIVE');
 
 --
 -- Indexes for dumped tables
@@ -317,13 +324,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `books`
 --
 ALTER TABLE `books`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `book_category`
 --
 ALTER TABLE `book_category`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `book_order`
@@ -335,7 +342,7 @@ ALTER TABLE `book_order`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -359,7 +366,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Constraints for dumped tables
@@ -369,21 +376,21 @@ ALTER TABLE `users`
 -- Constraints for table `book_category`
 --
 ALTER TABLE `book_category`
-  ADD CONSTRAINT `book_category_book_id_foreign` FOREIGN KEY (`book_id`) REFERENCES `books` (`id`),
-  ADD CONSTRAINT `book_category_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`);
+  ADD CONSTRAINT `book_category_book_id_foreign` FOREIGN KEY (`book_id`) REFERENCES `books` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `book_category_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `book_order`
 --
 ALTER TABLE `book_order`
-  ADD CONSTRAINT `book_order_book_id_foreign` FOREIGN KEY (`book_id`) REFERENCES `books` (`id`),
-  ADD CONSTRAINT `book_order_order_id_foreign` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`);
+  ADD CONSTRAINT `book_order_book_id_foreign` FOREIGN KEY (`book_id`) REFERENCES `books` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `book_order_order_id_foreign` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `orders`
 --
 ALTER TABLE `orders`
-  ADD CONSTRAINT `orders_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `orders_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
