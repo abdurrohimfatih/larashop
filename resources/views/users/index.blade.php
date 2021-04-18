@@ -53,7 +53,7 @@
                     <td>{{ $user->email }}</td>
                     <td>
                         @if ($user->avatar)
-                            <img src="{{ asset('public/storage/' . $user->avatar) }}" height="50px">
+                            <img src="{{ asset('storage/' . $user->avatar) }}" height="50px">
                         @else
                             N/A
                         @endif
@@ -113,6 +113,6 @@
 @endsection
 
 @section('footer-scripts')
-    <script src="{{ asset('public/sweetalert2/sweetalert2.all.min.js') }}"></script>
-    <script src="{{ asset('public/js/script.js') }}"></script>
+    <script src="{{ asset('sweetalert2/sweetalert2.all.min.js') }}"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
 @endsection

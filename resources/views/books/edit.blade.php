@@ -24,7 +24,7 @@
                 <label for="cover">Cover</label><br>
                 <small class="text-muted">Current cover</small><br>
                 @if ($book->cover)
-                    <img src="{{ asset('public/storage/' . $book->cover) }}" width="96px">
+                    <img src="{{ asset('storage/' . $book->cover) }}" width="96px">
                 @endif
                 <br><br>
                 <input type="file" name="cover" id="cover"
@@ -94,7 +94,8 @@
                 <br>
 
                 <label for="status">Status</label><br>
-                <select name="status" id="status" class="form-control {{ $errors->first('status') ? 'is-invalid' : '' }}">
+                <select name="status" id="status"
+                    class="form-control {{ $errors->first('status') ? 'is-invalid' : '' }}">
                     <option {{ $book->status == 'PUBLISH' ? 'selected' : '' }} value="PUBLISH">PUBLISH</option>
                     <option {{ $book->status == 'DRAFT' ? 'selected' : '' }} value="DRAFT">DRAFT</option>
                 </select>
@@ -110,9 +111,8 @@
     </div>
 
 @section('footer-scripts')
-    <link rel="stylesheet" href="{{ asset('public/select2/css/select2.min.css') }}" />
-    <script src="{{ asset('public/jquery/jquery-3.6.0.min.js') }}"></script>
-    <script src="{{ asset('public/select2/js/select2.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('select2/css/select2.min.css') }}" />
+    <script src="{{ asset('select2/js/select2.min.js') }}"></script>
 
     <script>
         $('#categories').select2({

@@ -28,19 +28,19 @@
             class="form-control">
         <label for="active">Active</label>
 
-        <input {{ $user->status == 'INACTIVE' ? 'checked' : '' }} type="radio" name="status" id="inactive" value="INACTIVE"
-            class="form-control">
+        <input {{ $user->status == 'INACTIVE' ? 'checked' : '' }} type="radio" name="status" id="inactive"
+            value="INACTIVE" class="form-control">
         <label for="inactive">Inactive</label>
         <br><br>
 
         <label for="roles">Roles</label>
         <br>
-        <input {{ in_array('ADMIN', json_decode($user->roles)) ? 'checked' : '' }} type="checkbox" name="roles[]" id="ADMIN"
-            value="ADMIN" class="form-control {{ $errors->first('roles') ? 'is-invalid' : '' }}">
+        <input {{ in_array('ADMIN', json_decode($user->roles)) ? 'checked' : '' }} type="checkbox" name="roles[]"
+            id="ADMIN" value="ADMIN" class="form-control {{ $errors->first('roles') ? 'is-invalid' : '' }}">
         <label for="ADMIN">Administrator</label>
 
-        <input {{ in_array('STAFF', json_decode($user->roles)) ? 'checked' : '' }} type="checkbox" name="roles[]" id="STAFF"
-            value="STAFF" class="form-control {{ $errors->first('roles') ? 'is-invalid' : '' }}">
+        <input {{ in_array('STAFF', json_decode($user->roles)) ? 'checked' : '' }} type="checkbox" name="roles[]"
+            id="STAFF" value="STAFF" class="form-control {{ $errors->first('roles') ? 'is-invalid' : '' }}">
         <label for="STAFF">Staff</label>
 
         <input {{ in_array('CUSTOMER', json_decode($user->roles)) ? 'checked' : '' }} type="checkbox" name="roles[]"
@@ -72,7 +72,7 @@
         <br>
         Current Avatar : <br>
         @if ($user->avatar)
-            <img src="{{ asset('public/storage/' . $user->avatar) }}" height="50px">
+            <img src="{{ asset('storage/' . $user->avatar) }}" height="50px">
             <br>
         @else
             No Avatar

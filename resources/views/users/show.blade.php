@@ -12,7 +12,7 @@
                 <br><br>
 
                 @if ($user->avatar)
-                    <img src="{{ asset('public/storage/' . $user->avatar) }}" width="128px">
+                    <img src="{{ asset('storage/' . $user->avatar) }}" width="128px">
                 @else
                     No Avatar
                 @endif

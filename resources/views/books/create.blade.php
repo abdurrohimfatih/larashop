@@ -1,9 +1,9 @@
 @extends('layouts.global')
 
 @section('footer-scripts')
-    <link rel="stylesheet" href="{{ asset('public/select2/css/select2.min.css') }}" />
-    <script src="{{ asset('public/jquery/jquery-3.6.0.min.js') }}"></script>
-    <script src="{{ asset('public/select2/js/select2.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('select2/css/select2.min.css') }}" />
+    <script src="{{ asset('jquery/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ asset('select2/js/select2.min.js') }}"></script>
 
     <script>
         $('#categories').select2({

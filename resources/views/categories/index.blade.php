@@ -53,7 +53,7 @@
                             <td>{{ $category->slug }}</td>
                             <td>
                                 @if ($category->image)
-                                    <img src="{{ asset('public/storage/' . $category->image) }}" width="48px">
+                                    <img src="{{ asset('storage/' . $category->image) }}" width="48px">
                                 @else
                                     No image
                                 @endif
@@ -106,6 +106,6 @@
 @endsection
 
 @section('footer-scripts')
-    <script src="{{ asset('public/sweetalert2/sweetalert2.all.min.js') }}"></script>
-    <script src="{{ asset('public/js/script.js') }}"></script>
+    <script src="{{ asset('sweetalert2/sweetalert2.all.min.js') }}"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
 @endsection

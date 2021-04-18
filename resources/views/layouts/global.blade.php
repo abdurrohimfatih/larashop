@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Larashop | @yield('title')</title>
-    <link rel="stylesheet" href="{{ asset('public/polished/polished.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/polished/iconic/css/open-iconic-bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('polished/polished.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('polished/iconic/css/open-iconic-bootstrap.min.css') }}">
 
     <style>
         .grid-highlight {
@@ -112,10 +112,10 @@
 
     @include('sweetalert::alert')
 
-    <script src="{{ asset('public/jquery/jquery-3.6.0.min.js') }}"></script>
-    <script src="{{ asset('public/bootstrap/popper.min.js') }}"></script>
-    <script src="{{ asset('public/bootstrap/bootstrap.min.js') }}"></script>
-    <link rel="stylesheet" href="{{ asset('public/sweetalert2/bootstrap-4.min.css') }}">
+    <script src="{{ asset('jquery/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ asset('bootstrap/popper.min.js') }}"></script>
+    <script src="{{ asset('bootstrap/bootstrap.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('sweetalert2/bootstrap-4.min.css') }}">
 
     @yield('footer-scripts')
 

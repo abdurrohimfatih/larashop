@@ -30,7 +30,7 @@
 
             @if ($category->image)
                 <span>Current image</span><br>
-                <img src="{{ asset('public/storage/' . $category->image) }}" width="120px">
+                <img src="{{ asset('storage/' . $category->image) }}" width="120px">
                 <br><br>
             @endif
             <input type="file" name="image" class="form-control {{ $errors->first('image') ? 'is-invalid' : '' }}">

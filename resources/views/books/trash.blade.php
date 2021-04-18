@@ -25,7 +25,7 @@
                         <li class="nav-item">
                             <a href="{{ route('books.index') }}"
                                 class="nav-link
-                                                                                                                                                                                                                                {{ Request::get('status') == null && Request::path() == 'books' ? 'active' : '' }}">
+                                                                                                                                                                                                                                    {{ Request::get('status') == null && Request::path() == 'books' ? 'active' : '' }}">
                                 All
                             </a>
                         </li>
@@ -70,7 +70,7 @@
                         <tr>
                             <td>
                                 @if ($book->cover)
-                                    <img src="{{ asset('public/storage/' . $book->cover) }}" width="96px">
+                                    <img src="{{ asset('storage/' . $book->cover) }}" width="96px">
                                 @endif
                             </td>
                             <td>{{ $book->title }}</td>
@@ -128,6 +128,6 @@
 @endsection
 
 @section('footer-scripts')
-    <script src="{{ asset('public/sweetalert2/sweetalert2.all.min.js') }}"></script>
-    <script src="{{ asset('public/js/script.js') }}"></script>
+    <script src="{{ asset('sweetalert2/sweetalert2.all.min.js') }}"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
 @endsection

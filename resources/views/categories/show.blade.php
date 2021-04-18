@@ -17,7 +17,7 @@
 
                 <label><b>Category image</b></label><br>
                 @if ($category->image)
-                    <img src="{{ asset('public/storage/' . $category->image) }}" width="120px">
+                    <img src="{{ asset('storage/' . $category->image) }}" width="120px">
                 @endif
             </div>
         </div>
